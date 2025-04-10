@@ -1,0 +1,55 @@
+{
+    "config_format": "4",
+    "autoinstall": false,
+    "name": "Toradex Easy Installer",
+    "description": "Toradex Easy Installer for verdin-imx8mp machine",
+    "version": "7.2.0+build.5",
+    "release_date": "2025-04-02",
+    "wrapup_script": "wrapup.sh",
+    "icon": "tezi.png",
+    "isinstaller": true,
+    "supported_product_ids": [
+        "0058",
+        "0061",
+        "0063",
+        "0064",
+        "0065",
+        "0066",
+        "0070"
+    ],
+    "blockdevs": [
+        {
+            "name": "emmc",
+            "partitions": [
+                {
+                    "partition_size_nominal": 128,
+                    "want_maximised": false,
+                    "content": {
+                        "label": "BOOT",
+                        "filesystem_type": "FAT",
+                        "mkfs_options": "",
+                        "filelist": [
+                            "tezi.itb",
+                            "boot.scr",
+                            "overlays.txt"
+                        ],
+                        "uncompressed_size": 40.1911039352417
+                    }
+                }
+            ]
+        },
+        {
+            "name": "emmc-boot0",
+            "erase": true,
+            "content": {
+                "filesystem_type": "raw",
+                "rawfiles": [
+                    {
+                        "filename": "imx-boot-sd",
+                        "dd_options": "seek=0"
+                    }
+                ]
+            }
+        }
+    ]
+}
