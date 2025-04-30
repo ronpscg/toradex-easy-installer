@@ -1,12 +1,12 @@
 {
     "config_format": "4",
     "autoinstall": false,
-    "name": "Toradex Easy Installer",
-    "description": "Toradex Easy Installer for verdin-imx8mp machine",
+    "name": "Toradex Easy Installer (thepscg.com LVDS edition)",
+    "description": "Toradex Easy Installer for verdin-imx8mp machine with LVDS support",
     "version": "7.2.0+build.5",
-    "release_date": "2025-04-02",
+    "release_date": "2025-04-02/2025-04-29",
     "wrapup_script": "wrapup.sh",
-    "icon": "tezi.png",
+    "icon": "tezi-pscg-icon.png",
     "isinstaller": true,
     "supported_product_ids": [
         "0058",
